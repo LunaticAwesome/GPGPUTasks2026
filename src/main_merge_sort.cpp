@@ -108,7 +108,7 @@ void run(int argc, char** argv)
 
             while (sorted_k < n) {
                 cuda::merge_sort(
-                    gpu::WorkSize(LARGE_GROUP_SIZE, n),
+                    gpu::WorkSize(GROUP_SIZE, n),
                     *in,
                     *out,
                     sorted_k,
